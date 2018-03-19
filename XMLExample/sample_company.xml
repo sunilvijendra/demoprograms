@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Company>
+  <Employees>
+    <Employee>
+      <Name>Sunil</Name>
+      <EmployeeID>10225</EmployeeID>
+      <DepartmentID>10</DepartmentID>
+    </Employee>
+    <Employee>
+      <Name>Ravi</Name>
+      <EmployeeID>10425</EmployeeID>
+      <DepartmentID>10</DepartmentID>
+    </Employee>
+    <Employee>
+      <Name>Raju</Name>
+      <EmployeeID>10225</EmployeeID>
+      <DepartmentID>12</DepartmentID>
+    </Employee>
+  </Employees>
+  <Departments>
+    <Department id="1">
+      <name>Finance</name>
+    </Department>
+    <Department id="11">
+      <name>Engineering</name>
+    </Department>
+    <Department id="12">
+      <name>Production</name>
+    </Department>
+  </Departments>
+</Company>
