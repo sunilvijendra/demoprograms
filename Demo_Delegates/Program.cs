@@ -29,7 +29,7 @@ namespace Demo_Delegates
 
     class Program
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             D cd1 = new D(C.M1);
             cd1(-1);                // call M1

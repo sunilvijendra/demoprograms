@@ -11,10 +11,10 @@ namespace DemoCollections
     {
         static void Main(string[] args)
         {
-            List_Demo();
+            //List_Demo();
             //List_Demo_2();
             //ArrayList_Demo();
-            //Dictionary_Demo();
+            Dictionary_Demo();
 
             Console.ReadKey();
         }
@@ -22,26 +22,39 @@ namespace DemoCollections
         private static void Dictionary_Demo()
         {
             var colors = new List<string>() { "violet", "indigo", "blue", "green", "yellow", "orange", "red" };
-            Dictionary<int, string> myDictionary = new Dictionary<int, string>();
+            Dictionary<string, int> myDictionary = new Dictionary<string, int>();
+
 
             int idx = 0;
             foreach (var color in colors)
             {
-                myDictionary.Add(idx, color);
+                myDictionary.Add(color, idx);
                 idx++;
             }
 
-            if (myDictionary.ContainsKey(5))
+            myDictionary.Add("violet", 999);
+
+            if (myDictionary.ContainsKey("blue"))
             {
-                Console.WriteLine("Key = {0}; Val = {1}", 5, myDictionary[5]);
+                Console.WriteLine("Key = {0}; Val = {1}", "blue", myDictionary["blue"]);
             }
         }
 
         private static void List_Demo_2()
         {
-            var numbers = new List<int>() { 10, 46, 13, 37, 28, 21, 88, 100 };
+            List<int> numbers = new List<int>() { 10, 46, 13, 37, 28, 21, 88, 100 };
 
             // Write code to remove odd numbers from the above number list
+
+            List<int> oddList = new List<int>();
+            oddList.AddRange(numbers);
+            foreach (var num in numbers)
+            {
+                if (num % 2 != 0)
+                    oddList.Remove(num);
+            }
+
+            ;
         }
 
         private static void List_Demo()
@@ -56,7 +69,9 @@ namespace DemoCollections
 
             Console.WriteLine("Element at idx 4 = {0}", colors.ElementAt(4));
 
-            foreach (var color in colors)
+            colors.Find(x => x == "violet");
+
+            foreach (string color in colors)
             {
                 Console.WriteLine("Color = {0}", color);
             }

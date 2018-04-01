@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BC846D17-798A-44D2-BD3C-94DE44996E63}</ProjectGuid>
+    <ProjectGuid>{5A2CA515-0220-4E08-A4AA-98A64D0016FF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Demo_Attributes</RootNamespace>
-    <AssemblyName>Demo_Attributes</AssemblyName>
+    <RootNamespace>Demo_Threads</RootNamespace>
+    <AssemblyName>Demo_Threads</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,10 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HelpAttribute.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReflectionDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

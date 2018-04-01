@@ -29,7 +29,7 @@ namespace Demo_Attributes
 
         // make the program thread safe for COM
         [STAThread]
-        static void Main(string[] args)
+        static void Main2(string[] args)
         {
             BasicAttributeDemo attrDemo = new BasicAttributeDemo();
 
@@ -48,7 +48,7 @@ namespace Demo_Attributes
         static extern int MessageDialog(int hWnd, string msg, string caption, int msgType);
 
         [STAThread]
-        static void Main1(string[] args)
+        static void Main(string[] args)
         {
             MessageDialog(0, "MessageDialog Called!", "DllImport Demo", 0);
         }

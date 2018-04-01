@@ -14,9 +14,27 @@ namespace XMLExample
         {
             XmlSerializer xs = new XmlSerializer(typeof(Company));
 
-            FileStream fs = new FileStream(@"C:\Users\sunilvijendra\Documents\rockwell_csharp\DemoPrograms\XMLExample\sample_company.xml", FileMode.Open);
+            FileStream fs = new FileStream("sample_company.xml", FileMode.Open);
 
             Company co = (Company) xs.Deserialize(fs);
+
+            fs.Close();
+
+            CompanyEmployee e = new CompanyEmployee();
+            e.DepartmentID = 12;
+            e.EmployeeID = 100;
+            e.Name = "Nagarjuna";
+
+            CompanyEmployee[] ceArr = new CompanyEmployee[1];
+            ceArr[0] = e;
+
+            co.Employees = ceArr;
+
+            FileStream fswrite = new FileStream("new_company.xml", FileMode.OpenOrCreate);
+
+            xs.Serialize(fswrite, co);
+            fswrite.Close();
+            ;
         }
     }
 }

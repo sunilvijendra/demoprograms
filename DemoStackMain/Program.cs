@@ -32,6 +32,15 @@ namespace DemoStackMain
             catch (MyUnderflowException e)
             {
                 Console.WriteLine("MyUnderflowException - Msg = {0}", e.Message);
+                return;
+            }
+            catch (Exception e)
+            {
+
+            }
+            finally
+            {
+                s = null;
             }
             Console.ReadKey();
         }

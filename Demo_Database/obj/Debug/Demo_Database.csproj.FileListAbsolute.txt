@@ -7,3 +7,13 @@ C:\Users\sunilvijendra\Documents\rockwell_csharp\DemoPrograms\Demo_Database\bin\
 C:\Users\sunilvijendra\Documents\rockwell_csharp\DemoPrograms\Demo_Database\obj\Debug\Demo_Database.csproj.CoreCompileInputs.cache
 C:\Users\sunilvijendra\Documents\rockwell_csharp\DemoPrograms\Demo_Database\obj\Debug\Demo_Database.exe
 C:\Users\sunilvijendra\Documents\rockwell_csharp\DemoPrograms\Demo_Database\obj\Debug\Demo_Database.pdb
+C:\Users\sunilvijendra\Documents\GitHub\demoprograms\Demo_Database\bin\Debug\Demo_Database.exe.config
+C:\Users\sunilvijendra\Documents\GitHub\demoprograms\Demo_Database\bin\Debug\Demo_Database.exe
+C:\Users\sunilvijendra\Documents\GitHub\demoprograms\Demo_Database\bin\Debug\Demo_Database.pdb
+C:\Users\sunilvijendra\Documents\GitHub\demoprograms\Demo_Database\bin\Debug\System.Data.SQLite.dll
+C:\Users\sunilvijendra\Documents\GitHub\demoprograms\Demo_Database\bin\Debug\System.Data.SQLite.pdb
+C:\Users\sunilvijendra\Documents\GitHub\demoprograms\Demo_Database\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\sunilvijendra\Documents\GitHub\demoprograms\Demo_Database\obj\Debug\Demo_Database.csprojResolveAssemblyReference.cache
+C:\Users\sunilvijendra\Documents\GitHub\demoprograms\Demo_Database\obj\Debug\Demo_Database.csproj.CoreCompileInputs.cache
+C:\Users\sunilvijendra\Documents\GitHub\demoprograms\Demo_Database\obj\Debug\Demo_Database.exe
+C:\Users\sunilvijendra\Documents\GitHub\demoprograms\Demo_Database\obj\Debug\Demo_Database.pdb

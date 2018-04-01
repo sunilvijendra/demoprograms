@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +23,82 @@ namespace Demo_Database
             }
             Console.ReadKey();
 
+        }
+
+    }
+
+    class DatabaseAccess
+    {
+        public void GetProducts(string sqlQuery)
+        {
+            string m_connectionString = @"Data Source=C:\Users\sunilvijendra\Documents\rockwell_csharp\DemoPrograms\Demo_Database\testDB.db;Version=3;";
+            // update to get your connection here
+
+            IDbConnection connection = new SQLiteConnection(m_connectionString);
+ 
+            Collection<Product> collection = new Collection<Product>();
+
+            IDbCommand command = connection.CreateCommand();
+            command.Connection = connection;
+            command.CommandText = sqlQuery;
+            command.CommandType = CommandType.Text;
+
+            try
+            {
+                connection.Open();
+
+                using (IDataReader reader = command.ExecuteReader())
+                {
+                    try
+                    {
+                        Product p = MapProduct(reader);
+                        collection.Add(p);
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
+
+
+                        // NOTE: 
+                        // consider handling exeption here instead of re-throwing
+                        // if graceful recovery can be accomplished
+                    }
+                    finally
+                    {
+                        reader.Close();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+
+                // NOTE: 
+                // consider handling exeption here instead of re-throwing
+                // if graceful recovery can be accomplished
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private Product MapProduct(IDataReader record)
+        {
+            Product prod = new Product();
+
+            try
+            {
+                prod.id = (DBNull.Value == record["ProductID"]) ? 0 : (int)record["ProductId"];
+
+                prod.name = (DBNull.Value == record["ProductName"]) ? "" : (string)record["ProductName"];
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+            return prod;
         }
     }
 }

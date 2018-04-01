@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HelloFSharpLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,18 +11,18 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            string input = Console.ReadLine();
-            Console.WriteLine("Hello, {0}! Today's date is {1}", input, 12);
+            //string input = Console.ReadLine();
+            //Console.WriteLine("Hello, {0}! Today's date is {1}", input, 12);
 
-            IControl control = new EditBox();
+            //IControl control = new EditBox();
 
-            INewControl newcontrol = new EditBox();
+            //INewControl newcontrol = new EditBox();
 
-            EditBox e = new EditBox();
+            //EditBox e = new EditBox();
 
-            IDataBound db = e;
+            //IDataBound db = e;
 
-            
+            Say.hello("Fsharp");
 
             Console.ReadKey();
         }
@@ -66,6 +67,6 @@ namespace HelloWorld
         {
             throw new NotImplementedException();
         }
-\
+
     }
 }

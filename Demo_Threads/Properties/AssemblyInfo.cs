@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DemoStackLib")]
+[assembly: AssemblyTitle("Demo_Threads")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DemoStackLib")]
+[assembly: AssemblyProduct("Demo_Threads")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -17,11 +17,10 @@ using System.Runtime.InteropServices;
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
 // COM, set the ComVisible attribute to true on that type.
-[assembly: ComVisible(true)]
-[assembly: AssemblyKeyFile("..\\..\\MyKeyFile.SNK")]
+[assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f14bc5de-b6cb-43d1-8f3a-1b22bfa60466")]
+[assembly: Guid("5a2ca515-0220-4e08-a4aa-98a64d0016ff")]
 
 // Version information for an assembly consists of the following four values:
 //

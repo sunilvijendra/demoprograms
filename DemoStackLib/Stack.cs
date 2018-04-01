@@ -1,16 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 
 namespace DemoStackLib
 {
-    public class Stack
+    [InterfaceType(ComInterfaceType.InterfaceIsDual)]
+    public interface IStack
+    {
+        void Push(int data);
+        int Pop();
+        int TOS();
+    }
+
+    [ClassInterface(ClassInterfaceType.None)]
+    public class Stack : IStack
     {
         private const int MAX_SIZE = 100;
         private int[] data;
-        private int tos;
+        private int tos = -1;
 
         public Stack()
         {

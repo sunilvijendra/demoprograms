@@ -6,6 +6,19 @@ using System.Threading.Tasks;
 
 namespace Demo_Database
 {
+    class Student
+    {
+        public int id;
+        public string name;
+
+        public Student(int id, string name)
+        {
+            this.id = id;
+            this.name = name;
+        }
+    }
+
+
     class Program
     {
         static void Main(string[] args)
@@ -20,6 +33,10 @@ namespace Demo_Database
             strClass.SetSomeVar("hello");
             Console.WriteLine("strClass Var = {0}", strClass.GetSomevar());
 
+
+            GenericClass<Student> studentClass = new GenericClass<Student>();
+            studentClass.SetSomeVar(new Student(1, "Sunil"));
+            Console.WriteLine("student id = {0}, name = {1}", studentClass.GetSomevar().id, studentClass.GetSomevar().name);
             Console.ReadKey();
 
         }

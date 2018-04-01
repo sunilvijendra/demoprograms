@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HelloFSharpLib\HelloFSharpLib.fsproj">
+      <Project>{648d05fc-718e-4e19-8648-66d62465cde9}</Project>
+      <Name>HelloFSharpLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
