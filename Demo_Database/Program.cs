@@ -14,9 +14,17 @@ namespace Demo_Database
     {
         static void Main(string[] args)
         {
-            ProductReader reader = new ProductReader("select * from Product");
+            //ProductReader reader = new ProductReader("select * from Product");
 
-            Collection<Product> productList = reader.Execute();
+            //Collection<Product> productList = reader.Execute();
+            //foreach (Product p in productList)
+            //{
+            //    Console.WriteLine("id = {0}; name = {1}", p.id, p.name);
+            //}
+
+            DatabaseAccess dbAccess = new DatabaseAccess();
+            Collection<Product> productList = dbAccess.GetProducts("select * from Product");
+
             foreach (Product p in productList)
             {
                 Console.WriteLine("id = {0}; name = {1}", p.id, p.name);
@@ -29,7 +37,7 @@ namespace Demo_Database
 
     class DatabaseAccess
     {
-        public void GetProducts(string sqlQuery)
+        public Collection<Product> GetProducts(string sqlQuery)
         {
             string m_connectionString = @"Data Source=C:\Users\sunilvijendra\Documents\rockwell_csharp\DemoPrograms\Demo_Database\testDB.db;Version=3;";
             // update to get your connection here
@@ -51,8 +59,11 @@ namespace Demo_Database
                 {
                     try
                     {
-                        Product p = MapProduct(reader);
-                        collection.Add(p);
+                        while (reader.Read())
+                        {
+                            Product p = MapProduct(reader);
+                            collection.Add(p);
+                        }
                     }
                     catch (Exception e)
                     {
@@ -81,6 +92,7 @@ namespace Demo_Database
             {
                 connection.Close();
             }
+            return collection;
         }
 
         private Product MapProduct(IDataReader record)
